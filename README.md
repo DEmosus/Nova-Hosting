@@ -6,29 +6,7 @@ NovaHost is a modern, responsive web hosting platform that provides users with c
 
 ## 🌐 Live Demo
 
-
-
----
-
-## 📁 Project Structure
-
-NovaHost/
-├── public/ # Frontend (served statically)
-│ ├── assets/ # Images, fonts, and shared assets
-│ ├── ecommerce/ # E-commerce pages (cart, checkout)
-│ ├── templates/ # Portfolio, Business, Blog templates
-│ ├── start-hosting/ # Hosting form + confirmation/thank you pages
-│ ├── css/ # Shared and page-specific styles
-│ └── js/ # Page-specific scripts
-├── routes/
-│ ├── contact.js # Contact form route
-│ └── startHosting.js # Hosting form route
-├── server.js # Express backend entry point
-├── package.json # Node dependencies & scripts
-├── .gitignore
-└── README.md
-
-
+https://nova-hosting.onrender.com/
 
 ---
 
@@ -45,7 +23,7 @@ NovaHost/
 
 ## 🚀 Local Development Setup
 
-1. **Clone the repository**
+**Clone the repository**
 
 ```bash
 git clone https://github.com/yourusername/novahost.git
@@ -56,22 +34,6 @@ npm start
 
 Open in browser:
 http://localhost:3000
-
-
-| Page                | Path                               | Purpose                     |
-| ------------------- | ---------------------------------- | --------------------------- |
-| Home                | `/index.html`                      | NovaHost homepage           |
-| Start Hosting       | `/start-hosting/start.html`        | Hosting account form        |
-| Confirmation        | `/start-hosting/confirmation.html` | Shows user input            |
-| Thank You           | `/start-hosting/thankyou.html`     | Final step after submission |
-| Portfolio Template  | `/templates/portfolio.html`        | Sample portfolio            |
-| Business Template   | `/templates/business.html`         | Sample business website     |
-| Blog Template       | `/templates/blog.html`             | Sample blog layout          |
-| E-commerce Homepage | `/ecommerce/index.html`            | Product grid                |
-| Cart Page           | `/ecommerce/cart.html`             | Cart management             |
-| Checkout Page       | `/ecommerce/checkout.html`         | Final order processing      |
-
-
 
 ---
 
