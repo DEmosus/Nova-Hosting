@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - NovaStore</title>
+  <link rel="stylesheet" href="../../shared.css" />
+  <link rel="stylesheet" href="styles/cart.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo"><a href="ecommerce.html">NovaStore</a></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="ecommerce.html">Shop</a></li>
+          <li><a href="cart.html" class="active">Cart (🛒<span id="cartTotal">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Your Cart</h2>
+    <section id="cartContainer" class="cart-container"></section>
+
+    <div class="cart-summary">
+      <h3>Total: <span id="cartTotalAmount">$0.00</span></h3>
+      <a href="checkout.html" class="btn primary">Proceed to Checkout</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 NovaStore. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/cart.js"></script>
+</body>
+</html>

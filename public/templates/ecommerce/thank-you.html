@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - NovaHost</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="thank-you.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-...your-integrity..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">NovaHost</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="ecommerce.html">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="thank-you container">
+      <div class="message-card">
+        <div class="success-icon">
+          <i class="fa-solid fa-circle-check fa-3x" style="color: #22c55e;"></i>
+        </div>
+
+        <h2>Thank You, <span id="userName">Customer</span>!</h2>
+        <p>Your order has been successfully placed.</p>
+
+        <p><strong>Email:</strong> <span id="userEmail">-</span></p>
+        <p><strong>Address:</strong> <span id="userAddress">-</span></p>
+
+        <p class="summary">Total Paid: <strong>$<span id="totalPaid">0.00</span></strong></p>
+
+        <a href="ecommerce.html" class="btn primary">Return to Shop</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h4>NovaHost</h4>
+          <p>&copy; 2025 NovaHost. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="ecommerce.html">Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contact</h5>
+          <p>Email: support@novahost.com</p>
+          <p>Phone: +1 (800) 555-0199</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const checkoutInfo = JSON.parse(localStorage.getItem("novaCheckout"));
+
+        if (checkoutInfo) {
+          document.getElementById("userName").textContent = checkoutInfo.name || "Customer";
+          document.getElementById("userEmail").textContent = checkoutInfo.email || "-";
+          document.getElementById("userAddress").textContent = checkoutInfo.address || "-";
+          document.getElementById("totalPaid").textContent = parseFloat(checkoutInfo.total).toFixed(2);
+          localStorage.removeItem("novaCheckout");
+        } else {
+          document.getElementById("userName").textContent = "Customer";
+          document.getElementById("totalPaid").textContent = "0.00";
+        }
+      });
+    </script>
+  </body>
+</html>

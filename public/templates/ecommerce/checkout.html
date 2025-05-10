@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - NovaHost Store</title>
+    <link rel="stylesheet" href="../../shared.css" />
+    <link rel="stylesheet" href="styles/checkout.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">NovaHost</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="ecommerce.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="checkout container">
+      <h2>Checkout</h2>
+
+      <div class="checkout-wrapper">
+        <form id="checkoutForm">
+          <h3>Billing Details</h3>
+          <label>Name:
+            <input type="text" id="name" required />
+          </label>
+          <label>Email:
+            <input type="email" id="email" required />
+          </label>
+          <label>Address:
+            <input type="text" id="address" required />
+          </label>
+          <label>Credit Card:
+            <input type="text" id="card" maxlength="16" required />
+          </label>
+
+          <button type="submit" class="btn primary">Place Order</button>
+        </form>
+
+        <aside class="order-summary">
+          <h3>Your Order</h3>
+          <ul id="orderItems"></ul>
+          <p class="total">Total: $<span id="orderTotal">0.00</span></p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h4>NovaHost</h4>
+          <p>&copy; 2025 NovaHost. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="ecommerce.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contact</h5>
+          <p>Email: support@novahost.com</p>
+          <p>Phone: +1 (800) 555-0199</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/checkout.js"></script>
+  </body>
+</html>

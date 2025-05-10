@@ -1,0 +1,19 @@
+.thank-you {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.thank-message h2 {
+  color: #10b981;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.thank-message p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.thank-message .btn {
+  margin: 1rem 0.5rem;
+}

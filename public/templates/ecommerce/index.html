@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaShop - Home</title>
+    <link rel="stylesheet" href="../../shared.css" />
+    <link rel="stylesheet" href="styles/ecommerce.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">NovaShop</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li>
+              <a href="cart.html">Cart (🛒<span id="cart-count">0</span>)</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2>Discover Stellar Deals</h2>
+          <p>
+            Shop from our featured products and launch your brand with NovaShop.
+          </p>
+          <a href="#products" class="btn primary">Start Shopping</a>
+        </div>
+      </section>
+
+      <section id="products" class="product-grid container">
+        <!-- Products will be inserted dynamically -->
+        <button
+          class="add-to-cart"
+          data-name="Product Name"
+          data-price="29.99"
+          data-image="images/product.jpg"
+        >
+          Add to Cart
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h4>NovaShop</h4>
+          <p>&copy; 2025 NovaHost. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Links</h5>
+          <ul>
+            <li><a href="../index.html">NovaHost Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/ecommerce.js"></script>
+    <script>
+      function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem("novaCart")) || [];
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.getElementById("cart-count").textContent = totalItems;
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+        addToCartButtons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const name = btn.dataset.name;
+            const price = parseFloat(btn.dataset.price);
+            const image = btn.dataset.image;
+
+            const cart = JSON.parse(localStorage.getItem("novaCart")) || [];
+
+            const existingItem = cart.find((item) => item.name === name);
+            if (existingItem) {
+              existingItem.quantity += 1;
+            } else {
+              cart.push({ name, price, image, quantity: 1 });
+            }
+
+            localStorage.setItem("novaCart", JSON.stringify(cart));
+            alert(`Added "${name}" to your cart.`);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+/* Reset spacing */
+body, h1, h2, h3, h4, h5, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Plan Cards */
+.plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0 4rem;
+}
+
+.plan-card {
+  background: #fff;
+  border: 2px solid #e3e3ee;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+}
+
+.plan-card h3 {
+  font-size: 1.75rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card .price {
+  font-size: 1.3rem;
+  color: #5a00e0;
+  margin-bottom: 1rem;
+}
+
+.plan-card ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.plan-card ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.plan-card ul li:last-child {
+  border-bottom: none;
+}
+
+/* Featured Plan */
+.featured {
+  border-color: #5a00e0;
+  background-color: #f5f0ff;
+  box-shadow: 0 0 12px rgba(90, 0, 224, 0.15);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.3rem;
+  background-color: #ddd;
+  color: #333;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.btn.primary {
+  background-color: #5a00e0;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #4a00c0;
+}

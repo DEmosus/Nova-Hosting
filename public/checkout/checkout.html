@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - NovaHost</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">NovaHost</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../packages/index.html">Packages</a></li>
+            <li><a href="../customers/index.html">Customers</a></li>
+            <li><a href="../start-hosting/index.html">Start Hosting</a></li>
+            <li><a href="checkout.html" class="active">Checkout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container checkout-page">
+      <h2>Review & Confirm</h2>
+      <p>Make sure everything looks good before you launch. 🚀</p>
+
+      <div class="checkout-grid">
+        <!-- Left: Details -->
+        <section class="review">
+          <h3>Your Hosting Details</h3>
+          <ul id="reviewList"></ul>
+          <h3>Billing Information</h3>
+          <form id="checkoutForm">
+            <input
+              type="text"
+              name="cardname"
+              placeholder="Cardholder Name"
+              required
+            />
+            <input
+              type="text"
+              name="cardnumber"
+              placeholder="Card Number"
+              required
+            />
+            <div class="card-details">
+              <input type="text" name="expiry" placeholder="MM/YY" required />
+              <input type="text" name="cvv" placeholder="CVV" required />
+            </div>
+            <button type="submit" class="btn primary">Confirm & Launch</button>
+          </form>
+        </section>
+
+        <!-- Right: Order Summary -->
+        <aside class="summary">
+          <h3>Order Summary</h3>
+          <div class="summary-box">
+            <p><strong>Plan:</strong> Pro Plan</p>
+            <p><strong>Monthly Cost:</strong> $15</p>
+            <hr />
+            <p><strong>Total Today:</strong> $15</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h4>NovaHost</h4>
+          <p>&copy; 2025 NovaHost. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../packages/index.html">Packages</a></li>
+            <li><a href="../customers/index.html">Customers</a></li>
+            <li><a href="../start-hosting/index.html">Start Hosting</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contact</h5>
+          <p>Email: support@novahost.com</p>
+          <p>Phone: +1 (800) 555-0199</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

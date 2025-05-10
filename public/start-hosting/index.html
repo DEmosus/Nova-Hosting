@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Hosting - NovaHost</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="start-hosting.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">NovaHost</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../packages/index.html">Packages</a></li>
+            <li><a href="../customers/index.html">Customers</a></li>
+            <li><a href="index.html" class="active">Start Hosting</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="start-hosting container">
+      <!-- Intro -->
+      <section class="intro">
+        <h2>You're Almost Online 🚀</h2>
+        <p>
+          Select your plan, choose a template, and set up your account to get
+          started.
+        </p>
+      </section>
+
+      <!-- Plan Summary -->
+      <section class="plan-summary">
+        <h3>Your Selected Plan</h3>
+        <div id="planDisplay" class="plan-card">
+        </div>
+      </section>
+      
+
+      <form id="setupForm" method="POST" action="/api/start-hosting">
+        <!-- Template Selection -->
+        <section class="template-selection">
+          <h3>Choose a Website Template</h3>
+          <div class="template-grid">
+            <label class="template-option">
+              <input type="radio" name="template" value="portfolio" checked />
+              <img src="../images/template1_portfolio.png" alt="Template 1" />
+              <span>Portfolio</span>
+              <a href="../templates/portfolio/index.html" target="_blank" class="preview-link">Preview</a>
+
+            </label>
+            <label class="template-option">
+              <input type="radio" name="template" value="business" />
+              <img src="../images/template2_business.png" alt="Template 2" />
+              <span>Business</span>
+              <a href="../templates/business/index.html" target="_blank" class="preview-link">Preview</a>
+
+            </label>
+            <label class="template-option">
+              <input type="radio" name="template" value="ecommerce" />
+              <img src="../images/template3_online_store.png" alt="Template 3" />
+              <span>Online Store</span>
+              <a href="../templates/ecommerce/ecommerce.html" target="_blank" class="preview-link">Preview</a>
+
+            </label>
+          </div>
+        </section>
+
+        <!-- Account Setup Form -->
+        <section class="account-setup">
+          <h3>Set Up Your Account</h3>
+          <!-- <form id="setupForm" method="POST" action="/api/start-hosting"> -->
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+          <input
+            type="text"
+            name="domain"
+            placeholder="Choose Your Domain (e.g., mysite.com)"
+            required
+          />
+          <input type="hidden" name="plan" value="Pro" />
+          <button type="submit" class="btn primary">
+            Continue to Checkout
+          </button>
+        </section>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h4>NovaHost</h4>
+          <p>&copy; 2025 NovaHost. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../packages/index.html">Packages</a></li>
+            <li><a href="../customers/index.html">Customers</a></li>
+            <li><a href="index.html">Start Hosting</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contact</h5>
+          <p>Email: support@novahost.com</p>
+          <p>Phone: +1 (800) 555-0199</p>
+        </div>
+      </div>
+    </footer>
+    <div id="toast" class="toast">
+      Hosting setup successful!
+      <div class="toast-progress" id="toastProgress"></div>
+    </div>
+    <script src="start-hosting.js"></script>
+    <!-- <script src="starthosting.js" defer></script> -->
+
+  </body>
+</html>

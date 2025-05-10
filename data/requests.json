@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "domain": "janesite.com",
+    "plan": "Pro",
+    "timestamp": "2025-05-05T06:41:31.053Z"
+  },
+  {
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "domain": "janesite.com",
+    "plan": "Pro",
+    "timestamp": "2025-05-05T06:46:00.696Z"
+  },
+  {
+    "name": "Isaac jr",
+    "email": "esaakadevsolutions@gmail.com",
+    "domain": "kings.com",
+    "plan": "Pro",
+    "template": "template1",
+    "timestamp": "2025-05-05T15:04:11.000Z"
+  },
+  {
+    "name": "Isaac jr",
+    "email": "esaakadevsolutions@gmail.com",
+    "domain": "kings.com",
+    "plan": "Pro",
+    "template": "template1",
+    "timestamp": "2025-05-05T15:07:20.493Z"
+  }
+]

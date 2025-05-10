@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hosting confirmation page for your NovaHost setup. Review your plan, domain, and template details.">
+    <meta name="keywords" content="NovaHost, hosting, confirmation, plan, domain, template" />
+    <title>Hosting Confirmed - NovaHost</title>
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="confirmation.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <h1 class="logo">NovaHost</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../packages/index.html">Packages</a></li>
+            <li><a href="../customers/index.html">Customers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="confirmation container">
+      <section class="success-message">
+        <h2>🎉 You're Online!</h2>
+        <p>Thanks for setting up your hosting with NovaHost.</p>
+        <p class="tagline">Here’s a summary of your setup:</p>
+      </section>
+
+      <section class="summary-card">
+        <h3>Account Details</h3>
+        <!-- <ul id="summaryList">
+          <li><strong>Plan:</strong> <span id="summary-plan">Pro Plan</span></li>
+          <li><strong>Domain:</strong> <span id="summary-domain">yourdomain.com</span></li>
+          <li><strong>Template:</strong> <span id="summary-template">Portfolio</span></li>
+        </ul> -->
+        <div aria-live="polite">
+          <ul id="summaryList">Loading your hosting setup...</ul>
+        </div>
+        
+      </section>
+
+      <section class="next-steps">
+        <p>We'll send your setup details to your email shortly.</p>
+        <a href="../index.html" class="btn primary">Return to Home</a>
+        <button id="clearDataBtn" class="btn secondary">Clear My Data</button>
+        <a href="../thank-you/index.html" class="btn primary">Continue</a>
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h4>NovaHost</h4>
+          <p>&copy; 2025 NovaHost. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../packages/index.html">Packages</a></li>
+            <li><a href="../customers/index.html">Customers</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h5>Contact</h5>
+          <p>Email: support@novahost.com</p>
+          <p>Phone: +1 (800) 555-0199</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="confirmation.js"></script>
+  </body>
+</html>
